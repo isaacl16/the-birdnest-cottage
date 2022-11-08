@@ -1,6 +1,11 @@
 import styled from "styled-components/macro";
+import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
-    text-align: center;
-    height: 6rem;
+    height: 100px;
+    background-color: ${colors.grey};
+    color: ${colors.white};
+    display: flex;
+    align-items: center;
+    justify-content: center;
 `
