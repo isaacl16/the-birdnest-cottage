@@ -1,7 +1,7 @@
 import { StyledWrapper } from "./styles"
 
 const HomeContainer = () => {
-    return <StyledWrapper>home container</StyledWrapper>
+    return <StyledWrapper className="home">home container</StyledWrapper>
 }
 
 export default HomeContainer

@@ -2,7 +2,7 @@ import { StyledWrapper } from "./styles"
 
 
 const ProductsContainer = () => {
-    return <StyledWrapper>products container</StyledWrapper>
+    return <StyledWrapper name="products">products container</StyledWrapper>
 }
 
 export default ProductsContainer
