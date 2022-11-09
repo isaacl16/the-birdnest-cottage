@@ -1,9 +1,9 @@
 import { StyledChild, StyledContainer, StyledIcon, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
 
 
-const AboutContainer = () => {
+const AboutContainer = (props) => {
     return (
-        <StyledWrapper className="about">
+        <StyledWrapper ref={props.aboutRef}>
             <StyledContainer>
                 <h1>About</h1>
             </StyledContainer>

@@ -2,9 +2,9 @@ import StyledButton from "../../components/Button"
 import { StyledChild, StyledContainer, StyledImage, StyledWrapper } from "./styles"
 
 
-const ProductsContainer = () => {
+const ProductsContainer = (props) => {
     return (
-        <StyledWrapper name="products">
+        <StyledWrapper ref={props.productsRef}>
             <StyledContainer>
                 <h1>Products</h1>
             </StyledContainer>

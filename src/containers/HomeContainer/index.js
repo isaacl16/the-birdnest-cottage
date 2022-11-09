@@ -1,9 +1,9 @@
 import StyledButton from "../../components/Button"
 import { HeroImage, StyledButtonWrapper, StyledIcon, StyledWrapper } from "./styles"
 
-const HomeContainer = () => {
+const HomeContainer = (props) => {
     return (
-        <StyledWrapper className="home">
+        <StyledWrapper ref={props.homeRef}>
             <HeroImage />
             <StyledButtonWrapper>
                 <StyledButton>

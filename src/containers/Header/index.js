@@ -1,10 +1,10 @@
 import Navbar from "../Navbar"
 import { StyledLogo, StyledWrapper } from "./styles"
-const Header = () => {
+const Header = (props) => {
     return (
         <StyledWrapper>
             <StyledLogo />
-            <Navbar />
+            <Navbar homeRef={props.homeRef} productsRef={props.productsRef} aboutRef={props.aboutRef} />
         </StyledWrapper>
     )
 }

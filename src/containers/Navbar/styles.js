@@ -1,9 +1,9 @@
 import styled, { css } from "styled-components/macro";
 import colors from "../../theme/colors";
 
-const activeStyle = () => css`
-    font-weight: bold;
-    color: ${colors.green};
+const activeStyle = (props) => css`
+    font-weight: ${props => props.isActive ? 'bold' : 'normal'};
+    color: ${props => props.isActive ? colors.green : colors.grey};
 `
 
 export const StyledNav = styled.ul`
@@ -14,11 +14,14 @@ export const StyledNav = styled.ul`
     list-style: none;
     margin-left: auto;
     font-family: TrajanusBricks;
-    a.active {
-        ${activeStyle()}
-    }
 `
 
 export const StyledNavItem = styled.li`
     padding-left: 1rem; 
+    :hover {
+        cursor: pointer;
+    }
+    span {
+        ${activeStyle(props => props.isActive)}
+    }
 `
