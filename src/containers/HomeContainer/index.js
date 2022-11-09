@@ -1,4 +1,4 @@
-import StyledButton from "../../components/Button"
+import Button from "../../components/Button"
 import { HeroImage, StyledButtonWrapper, StyledIcon, StyledWrapper } from "./styles"
 
 const HomeContainer = (props) => {
@@ -6,13 +6,13 @@ const HomeContainer = (props) => {
         <StyledWrapper ref={props.homeRef}>
             <HeroImage />
             <StyledButtonWrapper>
-                <StyledButton>
+                <Button>
                     <p>Visit our shop</p>
                     <StyledIcon />
-                </StyledButton>
-                <StyledButton>
+                </Button>
+                <Button>
                     <p>Find out more</p>
-                </StyledButton>
+                </Button>
             </StyledButtonWrapper>
 
         </StyledWrapper>

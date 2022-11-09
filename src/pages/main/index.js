@@ -1,4 +1,4 @@
-import { useEffect, useRef } from "react"
+import { useEffect, useRef, useState } from "react"
 
 import AboutContainer from "../../containers/AboutContainer"
 import Footer from "../../containers/Footer"

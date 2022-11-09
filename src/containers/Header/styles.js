@@ -9,6 +9,9 @@ export const StyledWrapper = styled.div`
     background-color: ${colors.white};
     position: sticky;
     box-shadow: 1px 1px #e6e6e6;
+    @media (max-width: 1024px) {
+        padding: 0 30px 0 30px;
+    }
 `
 
 export const StyledLogo = styled.div`
