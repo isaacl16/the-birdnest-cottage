@@ -17,6 +17,12 @@ export const StyledButtonWrapper = styled.div`
     button{
         margin: 0 20px;
     }
+    @media (max-width: 768px) {
+        flex-direction: column;
+        button {
+            margin-bottom: 20px;
+        }
+    }
 `
 
 export const HeroImage = styled.div`

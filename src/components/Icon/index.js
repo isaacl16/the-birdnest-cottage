@@ -1,8 +1,8 @@
 import { StyledIcon } from "./styles"
 
-const Icon = ({ width = 32, height = 32 }) => {
+const Icon = (props) => {
     return (
-        <StyledIcon width={width} height={height} />
+        <StyledIcon icon={props.icon} />
     )
 }
 

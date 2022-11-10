@@ -1,12 +1,12 @@
-import { StyledChild, StyledContainer, StyledIcon, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
+import { StyledChild, StyledContainer, StyledHeader, StyledIcon, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
 
 
 const AboutContainer = (props) => {
     return (
         <StyledWrapper ref={props.aboutRef}>
-            <StyledContainer>
+            <StyledHeader>
                 <h1>About</h1>
-            </StyledContainer>
+            </StyledHeader>
             <StyledContainer>
                 <StyledChild>
                     <div>

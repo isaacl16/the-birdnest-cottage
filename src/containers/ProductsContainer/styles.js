@@ -5,14 +5,24 @@ export const StyledWrapper = styled.div`
     padding: 10%;
 `
 
+export const StyledHeader = styled.div`
+    width: 80%;
+    max-width: 1100px;
+    text-align: start;
+    margin: 30px auto;
+`
+
+
 export const StyledContainer = styled.div`
+    max-width: 1100px;
+    min-width: 1100px;
     width: 80%;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
     justify-content: start;
-    margin: auto;
+    margin: 30px auto;
 `
 export const StyledChild = styled.div`
     margin-top: 70px;
