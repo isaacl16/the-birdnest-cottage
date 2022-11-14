@@ -11,7 +11,7 @@ export const StyledWrapper = styled.div`
 export const StyledHeader = styled.div`
     width: 100%;
     max-width: ${breakpoints.xl};
-    margin: 30px 0;
+    margin: 30px auto;
     font-weight: bold;
     @media (max-width: ${breakpoints.sm}) {
         width: 100%;
@@ -21,8 +21,8 @@ export const StyledHeader = styled.div`
 
 export const StyledContainer = styled.div`
     width: 100%;
-    max-width: 1100px;
-    margin: 30px 0;
+    max-width: ${breakpoints.xl};
+    margin: 30px auto;
     display: flex;
     flex-direction: row;
     justify-content: space-between;

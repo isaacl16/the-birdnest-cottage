@@ -8,7 +8,7 @@ export const StyledWrapper = styled.div`
     box-sizing: border-box;
     width 100%;
     top: 0;
-    padding: 0 100px;
+    padding: 0 150px;
     background-color: ${colors.white};
     position: fixed;
     box-shadow: 1px 1px #e6e6e6;

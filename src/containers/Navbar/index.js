@@ -11,7 +11,7 @@ const Navbar = (props) => {
     const scrollToSection = (elementRef) => {
         // console.log(elementRef.current.offsetTop)
         window.scrollTo({
-            top: elementRef.current.offsetTop - 100,
+            top: elementRef.current.offsetTop - 70,
             behavior: 'smooth'
         })
         closeOnClick()
@@ -82,6 +82,9 @@ const Navbar = (props) => {
                 </StyledNavItem>
                 <StyledNavItem onClick={() => scrollToSection(props.productsRef)} isActive={activeLink === 'products' ? true : false}>
                     PRODUCTS
+                </StyledNavItem>
+                <StyledNavItem>
+                    SHOP
                 </StyledNavItem>
             </StyledNav>
 

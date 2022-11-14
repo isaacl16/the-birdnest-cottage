@@ -1,5 +1,4 @@
-import { useEffect, useRef, useState } from "react"
-
+import { useRef } from "react"
 import AboutContainer from "../../containers/AboutContainer"
 import Footer from "../../containers/Footer"
 import Header from "../../containers/Header"
