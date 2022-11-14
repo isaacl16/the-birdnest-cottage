@@ -1,8 +1,9 @@
 import styled from "styled-components/macro";
+import breakpoints from "../../theme/breakpoints";
 import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
-    margin-top: -100px;
+    margin-top: 0px;
     padding: 200px 0 100px 0;
     display: flex;
     flex-direction: column;
@@ -17,7 +18,7 @@ export const StyledButtonWrapper = styled.div`
     button{
         margin: 0 20px;
     }
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.md}) {
         flex-direction: column;
         button {
             margin-bottom: 20px;
@@ -25,11 +26,21 @@ export const StyledButtonWrapper = styled.div`
     }
 `
 
+export const StyledImageContainer = styled.div`
+    width: 100%;
+    height: 100%;
+    max-width: 675px;
+    max-height: 600px;
+    margin: -100px auto 0 auto;
+`
+
+
 export const HeroImage = styled.div`
-    margin-top: -100px;
-    width: 675px;
-    height: 600px;
-    background-image: url('/assets/hero.png')
+    width: 100%;
+    height: 100%;
+    padding-bottom: 90%;
+    background-image: url('/assets/hero.png');
+    background-size: cover;
 `
 
 export const StyledIcon = styled.div`

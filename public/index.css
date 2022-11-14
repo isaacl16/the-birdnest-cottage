@@ -1,0 +1,10 @@
+@font-face {
+  font-family: "TrajanusBricks";
+  src: local("TrajanusBricks"),
+    url("assets/fonts/TrajanusBricks.ttf") format("truetype");
+}
+
+@font-face {
+  font-family: "Manrope";
+  src: url("assets/fonts/Manrope-VariableFont_wght.ttf") format("truetype");
+}

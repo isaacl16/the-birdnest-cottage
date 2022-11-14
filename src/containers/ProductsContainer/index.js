@@ -1,6 +1,6 @@
 import StyledButton from "../../components/Button"
 import Icon from "../../components/Icon"
-import { StyledChild, StyledContainer, StyledHeader, StyledImage, StyledWrapper } from "./styles"
+import { StyledColumn, StyledContainer, StyledDescription, StyledHeader, StyledImage, StyledWrapper } from "./styles"
 
 
 const ProductsContainer = (props) => {
@@ -10,60 +10,72 @@ const ProductsContainer = (props) => {
                 <h1>Products</h1>
             </StyledHeader>
             <StyledContainer>
-                <StyledChild>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST LEMONGRASS</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST LEMONGRASS</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
-                <StyledChild>
+                </StyledColumn>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST OSMANTHUS & MANUKA HONEY</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST OSMANTHUS & MANUKA HONEY</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
-                <StyledChild>
+                </StyledColumn>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST LOTUS SEED GOJI</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST LOTUS SEED GOJI</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
-                <StyledChild>
+                </StyledColumn>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST PEAR WOLFBERRY</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST PEAR WOLFBERRY</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
-                <StyledChild>
+                </StyledColumn>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST ROCK SUGAR</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST ROCK SUGAR</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
-                <StyledChild>
+                </StyledColumn>
+                <StyledColumn>
                     <StyledImage />
-                    <p>BIRDNEST CHINESE YAM GOJI</p>
-                    <p>500G - $1000</p>
-                    <p>100G - $210</p>
-                    <StyledButton>
+                    <StyledDescription>
+                        <p>BIRDNEST CHINESE YAM GOJI</p>
+                        <p>500G - $1000</p>
+                        <p>100G - $210</p>
+                    </StyledDescription>
+                    <StyledButton width="100%">
                         <Icon icon="cart" />
                     </StyledButton>
-                </StyledChild>
+                </StyledColumn>
 
             </StyledContainer>
         </StyledWrapper>

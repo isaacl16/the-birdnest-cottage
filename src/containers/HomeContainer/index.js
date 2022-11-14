@@ -1,16 +1,19 @@
 import Button from "../../components/Button"
-import { HeroImage, StyledButtonWrapper, StyledIcon, StyledWrapper } from "./styles"
+import Icon from "../../components/Icon"
+import { HeroImage, StyledButtonWrapper, StyledImageContainer, StyledWrapper } from "./styles"
 
 const HomeContainer = (props) => {
     return (
         <StyledWrapper ref={props.homeRef}>
-            <HeroImage />
+            <StyledImageContainer>
+                <HeroImage />
+            </StyledImageContainer>
             <StyledButtonWrapper>
                 <Button>
                     <p>Visit our shop</p>
-                    <StyledIcon />
+                    <Icon icon="lazada" />
                 </Button>
-                <Button>
+                <Button outline={true}>
                     <p>Find out more</p>
                 </Button>
             </StyledButtonWrapper>

@@ -11,7 +11,7 @@ const Navbar = (props) => {
     const scrollToSection = (elementRef) => {
         // console.log(elementRef.current.offsetTop)
         window.scrollTo({
-            top: elementRef.current.offsetTop,
+            top: elementRef.current.offsetTop - 100,
             behavior: 'smooth'
         })
     }
@@ -37,10 +37,12 @@ const Navbar = (props) => {
 
     const menuOnClick = () => {
         setMobileNavMenu(true)
+        document.body.style.overflow = 'hidden'
     }
 
     const closeOnClick = () => {
         setMobileNavMenu(false)
+        document.body.style.overflow = 'unset'
     }
     useScroll(handleScroll)
     useResize(handleResize)

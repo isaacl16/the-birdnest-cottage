@@ -1,4 +1,5 @@
-import { StyledChild, StyledContainer, StyledHeader, StyledIcon, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
+import Icon from "../../components/Icon"
+import { StyledChild, StyledContainer, StyledHeader, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
 
 
 const AboutContainer = (props) => {
@@ -15,8 +16,8 @@ const AboutContainer = (props) => {
                         Vestibulum sapien ipsum, pretium sit amet nunc at, feugiat imperdiet risus. Etiam fermentum dictum ipsum, id lobortis sapien. Aenean sollicitudin nec massa ac dictum. Mauris sed ante neque. Nullam sodales sodales gravida.
                     </div>
                     <StyledIconWrapper>
-                        <StyledIcon icon="instagram" />
-                        <StyledIcon icon="mail" />
+                        <Icon icon="instagram" />
+                        <Icon icon="mail" />
                     </StyledIconWrapper>
                 </StyledChild>
                 <StyledChild>

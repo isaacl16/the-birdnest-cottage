@@ -1,4 +1,5 @@
 import styled from "styled-components/macro";
+import breakpoints from "../../theme/breakpoints";
 import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
@@ -11,6 +12,11 @@ export const StyledHeader = styled.div`
     width: 80%;
     max-width: 1100px;
     margin: 30px auto;
+    padding-left: 40px;
+    @media (max-width: ${breakpoints.sm}) {
+        width: 100%;
+        padding: 0;
+    }
 `
 
 export const StyledContainer = styled.div`
@@ -19,10 +25,10 @@ export const StyledContainer = styled.div`
     margin: 30px auto;
     display: flex;
     flex-direction: row;
-    @media (max-width: 768px) {
+    @media (max-width: ${breakpoints.md}) {
         flex-direction: column-reverse
     }
-    @media (max-width: 480px) {
+    @media (max-width: ${breakpoints.sm}) {
         width: 100%;
     }
 `
@@ -31,9 +37,14 @@ export const StyledChild = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: 768px){
+    padding: 20px;
+    @media (max-width: ${breakpoints.md}){
+        margin: 20px auto 0 auto;
         width: 100%;
-        margin-top: 20px;
+    }
+    @media (max-width: ${breakpoints.sm}){
+        margin: 20px auto 0 auto;
+        padding: 0;
     }
 `
 
@@ -42,12 +53,16 @@ export const StyledIconWrapper = styled.div`
     flex-direction: row;
     align-items: center;
     width: 100%;
+    margin-top: 20px;
+    div {
+        margin-right: 20px;
+    }
 `
 
 export const StyledImage = styled.div`
-    top: -50%;
-    width: 401px;
-    height: 319px;
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
     background-image: url('/assets/about.png');
     background-size: cover;
 `
