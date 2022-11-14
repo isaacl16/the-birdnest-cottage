@@ -26,11 +26,9 @@ const Main = () => {
         const scrollPos = window.pageYOffset;
         if (aboutPosition - 400 < scrollPos) {
             doShow(state => ({ ...state, itemTwo: true }));
-            console.log(2)
         }
         if (productsPosition - 400 < scrollPos) {
             doShow(state => ({ ...state, itemThree: true }));
-            console.log(3)
         }
     };
     useScroll(onScroll)

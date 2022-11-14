@@ -1,22 +1,26 @@
+import { useMemo } from "react"
 import products from "../../assets/images/products"
-import Button from "../../components/Button"
 import Card from "../../components/Card"
-import Icon from "../../components/Icon"
+import data from "../../data/products.json"
 import { StyledContainer, StyledHeader, StyledWrapper } from "./styles"
 
 const ProductsContainer = (props) => {
+
+    const renderProducts = useMemo(() => {
+        return data.length ?
+            data.map((product) => {
+                return <Card image={products[product.image]} title={product.title} price1={product.price1} price2={product.price2} />
+            })
+            : <p>No Products Found</p>
+    }, [])
+
     return (
         <StyledWrapper animate={props.animate} ref={props.productsRef}>
             <StyledHeader>
                 <h1>Products</h1>
             </StyledHeader>
             <StyledContainer>
-                <Card image={products.product} title="BIRDNEST LEMONGRASS" />
-                <Card image={products.product} title="BIRDNEST OSMANTHUS & MANUKA HONEY" />
-                <Card image={products.product} title="BIRDNEST LOTUS SEED GOJI" />
-                <Card image={products.product} title="BIRDNEST PEAR WOLFBERRY" />
-                <Card image={products.product} title="BIRDNEST ROCK SUGAR" />
-                <Card image={products.product} title="BIRDNEST CHINESE YAM GOJI" />
+                {renderProducts}
             </StyledContainer>
         </StyledWrapper>
     )

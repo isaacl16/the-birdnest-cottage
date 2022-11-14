@@ -8,8 +8,8 @@ const Card = (props) => {
             <StyledImage src={props.image} />
             <StyledDescription>
                 <StyledTitle>{props.title}</StyledTitle>
-                <p>500G - $1000</p>
-                <p>100G - $210</p>
+                <p>{props.price1}</p>
+                <p>{props.price2}</p>
             </StyledDescription>
             <Button width="100%">
                 <Icon icon="cart" />
