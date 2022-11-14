@@ -29,7 +29,7 @@ export const StyledContainer = styled.div`
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    @media (max-width: ${breakpoints.md}) {
+    @media (max-width: ${breakpoints.lg}) {
         flex-direction: column-reverse
     }
     @media (max-width: ${breakpoints.sm}) {
@@ -43,12 +43,11 @@ export const StyledChild = styled.div`
     display: flex;
     flex-direction: column;
     align-items: center;
-    @media (max-width: ${breakpoints.md}){
+    @media (max-width: ${breakpoints.lg}){
         margin: 20px auto 0 auto;
         width: 100%;
     }
     @media (max-width: ${breakpoints.sm}){
-        margin: 20px auto 0 auto;
         padding: 0;
     }
 `

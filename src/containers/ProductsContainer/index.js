@@ -1,7 +1,8 @@
 import products from "../../assets/images/products"
-import StyledButton from "../../components/Button"
+import Button from "../../components/Button"
+import Card from "../../components/Card"
 import Icon from "../../components/Icon"
-import { StyledColumn, StyledContainer, StyledDescription, StyledHeader, StyledImage, StyledTitle, StyledWrapper } from "./styles"
+import { StyledContainer, StyledHeader, StyledWrapper } from "./styles"
 
 const ProductsContainer = (props) => {
     return (
@@ -10,73 +11,12 @@ const ProductsContainer = (props) => {
                 <h1>Products</h1>
             </StyledHeader>
             <StyledContainer>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST LEMONGRASS</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST OSMANTHUS & MANUKA HONEY</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST LOTUS SEED GOJI</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST PEAR WOLFBERRY</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST ROCK SUGAR</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-                <StyledColumn>
-                    <StyledImage src={products.product} />
-                    <StyledDescription>
-                        <StyledTitle>BIRDNEST CHINESE YAM GOJI</StyledTitle>
-                        <p>500G - $1000</p>
-                        <p>100G - $210</p>
-                    </StyledDescription>
-                    <StyledButton width="100%">
-                        <Icon icon="cart" />
-                    </StyledButton>
-                </StyledColumn>
-
+                <Card image={products.product} title="BIRDNEST LEMONGRASS" />
+                <Card image={products.product} title="BIRDNEST OSMANTHUS & MANUKA HONEY" />
+                <Card image={products.product} title="BIRDNEST LOTUS SEED GOJI" />
+                <Card image={products.product} title="BIRDNEST PEAR WOLFBERRY" />
+                <Card image={products.product} title="BIRDNEST ROCK SUGAR" />
+                <Card image={products.product} title="BIRDNEST CHINESE YAM GOJI" />
             </StyledContainer>
         </StyledWrapper>
     )
