@@ -1,5 +1,6 @@
 import styled from "styled-components/macro";
 import breakpoints from "../../theme/breakpoints";
+import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
     min-height: 80vh;
@@ -7,45 +8,49 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledHeader = styled.div`
-    width: 80%;
-    max-width: 1100px;
+    width: 100%;
+    max-width: ${breakpoints.xl};
     text-align: start;
-    margin: 30px auto;
-    padding-left: 40px;
+    margin: 30px 0;
     @media (max-width: ${breakpoints.sm}){
         padding: 0px;
         width: 100%;
     }
+    h1{
+        font-weight: bold;
+    }
 `
-
+export const StyledTitle = styled.p`
+    color: ${colors.gold};
+    font-weight: bold;
+`
 export const StyledDescription = styled.div`
-    min-height: 150px;
+    min-height: 160px;
 `
 
 
 export const StyledContainer = styled.div`
-    width: 80%;
-    max-width:1100px;
+    width: 100%;
+    max-width: ${breakpoints.xl};
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: start;
     justify-content: space-between;
-    margin: 0px auto;
     @media (max-width: ${breakpoints.sm}){
         width: 100%;
     }
 `
 export const StyledColumn = styled.div`
-    margin-top: 70px;
-    width: 28%;
-    padding: 0 20px;
+    margin-top: 20px;
+    width: 30%;
     display:flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    margin-bottom: 20px;
     @media (max-width: ${breakpoints.md}){
-        width: 40%;
+        width: 45%;
     }
     @media (max-width: ${breakpoints.sm}){
         margin: 40px auto;
@@ -54,8 +59,7 @@ export const StyledColumn = styled.div`
     }
 `
 
-export const StyledImage = styled.div`
+export const StyledImage = styled.img`
     width: 100%;
-    padding-bottom: 66%;
-    background-image: url('/assets/products/product.png')
+    heigh: auto;
 `

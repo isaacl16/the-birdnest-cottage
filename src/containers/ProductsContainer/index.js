@@ -1,7 +1,7 @@
+import products from "../../assets/images/products"
 import StyledButton from "../../components/Button"
 import Icon from "../../components/Icon"
-import { StyledColumn, StyledContainer, StyledDescription, StyledHeader, StyledImage, StyledWrapper } from "./styles"
-
+import { StyledColumn, StyledContainer, StyledDescription, StyledHeader, StyledImage, StyledTitle, StyledWrapper } from "./styles"
 
 const ProductsContainer = (props) => {
     return (
@@ -11,9 +11,9 @@ const ProductsContainer = (props) => {
             </StyledHeader>
             <StyledContainer>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST LEMONGRASS</p>
+                        <StyledTitle>BIRDNEST LEMONGRASS</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>
@@ -22,9 +22,9 @@ const ProductsContainer = (props) => {
                     </StyledButton>
                 </StyledColumn>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST OSMANTHUS & MANUKA HONEY</p>
+                        <StyledTitle>BIRDNEST OSMANTHUS & MANUKA HONEY</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>
@@ -33,9 +33,9 @@ const ProductsContainer = (props) => {
                     </StyledButton>
                 </StyledColumn>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST LOTUS SEED GOJI</p>
+                        <StyledTitle>BIRDNEST LOTUS SEED GOJI</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>
@@ -44,9 +44,9 @@ const ProductsContainer = (props) => {
                     </StyledButton>
                 </StyledColumn>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST PEAR WOLFBERRY</p>
+                        <StyledTitle>BIRDNEST PEAR WOLFBERRY</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>
@@ -55,9 +55,9 @@ const ProductsContainer = (props) => {
                     </StyledButton>
                 </StyledColumn>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST ROCK SUGAR</p>
+                        <StyledTitle>BIRDNEST ROCK SUGAR</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>
@@ -66,9 +66,9 @@ const ProductsContainer = (props) => {
                     </StyledButton>
                 </StyledColumn>
                 <StyledColumn>
-                    <StyledImage />
+                    <StyledImage src={products.product} />
                     <StyledDescription>
-                        <p>BIRDNEST CHINESE YAM GOJI</p>
+                        <StyledTitle>BIRDNEST CHINESE YAM GOJI</StyledTitle>
                         <p>500G - $1000</p>
                         <p>100G - $210</p>
                     </StyledDescription>

@@ -12,14 +12,17 @@ export const StyledWrapper = styled.div`
     background-color: ${colors.white};
     position: fixed;
     box-shadow: 1px 1px #e6e6e6;
-    @media (max-width: ${breakpoints.md}) {
-        padding: 0 30px 0 30px;
+    @media (max-width: ${breakpoints.lg}) {
+        padding: 0 40px 0 16px;
     }
+    @media (max-width: ${breakpoints.md}) {
+        padding: 0 20px 0 8px;
+    }
+
 `
 
-export const StyledLogo = styled.div`
+export const StyledLogo = styled.img`
     margin-right: auto;
-    height: 100px;
+    height: auto%;
     width: 113px;
-    background-image: url('/assets/logo.png');
 `

@@ -9,10 +9,10 @@ export const StyledWrapper = styled.div`
 `
 
 export const StyledHeader = styled.div`
-    width: 80%;
-    max-width: 1100px;
-    margin: 30px auto;
-    padding-left: 40px;
+    width: 100%;
+    max-width: ${breakpoints.xl};
+    margin: 30px 0;
+    font-weight: bold;
     @media (max-width: ${breakpoints.sm}) {
         width: 100%;
         padding: 0;
@@ -20,11 +20,12 @@ export const StyledHeader = styled.div`
 `
 
 export const StyledContainer = styled.div`
-    width: 80%;
+    width: 100%;
     max-width: 1100px;
-    margin: 30px auto;
+    margin: 30px 0;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     @media (max-width: ${breakpoints.md}) {
         flex-direction: column-reverse
     }
@@ -33,11 +34,10 @@ export const StyledContainer = styled.div`
     }
 `
 export const StyledChild = styled.div`
-    width: 50%;
+    width: 48%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    padding: 20px;
     @media (max-width: ${breakpoints.md}){
         margin: 20px auto 0 auto;
         width: 100%;
@@ -54,17 +54,14 @@ export const StyledIconWrapper = styled.div`
     align-items: center;
     width: 100%;
     margin-top: 20px;
-    div {
+    img {
         margin-right: 20px;
     }
 `
 
-export const StyledImage = styled.div`
+export const StyledImage = styled.img`
     width: 100%;
-    height: 100%;
-    min-height: 300px;
-    background-image: url('/assets/about.png');
-    background-size: cover;
+    height: auto;
 `
 
 export const StyledIcon = styled.div`

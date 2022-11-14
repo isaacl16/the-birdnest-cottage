@@ -23,7 +23,6 @@ export const StyledNav = styled.ul`
     justify-content: center;
     list-style: none;
     margin-left: auto;
-    font-family: TrajanusBricks;
     background-color: rgba(255, 255, 255, 0);
     padding: 0;
     z-index: 1;
@@ -61,6 +60,9 @@ export const StyledContainer = styled.div`
 
 export const StyledNavItem = styled.li`
     padding-left: 1rem; 
+    :first-child {
+        padding: 0;
+    }
     :hover {
         cursor: pointer;
     }

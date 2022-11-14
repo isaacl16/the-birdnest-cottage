@@ -35,12 +35,9 @@ export const StyledImageContainer = styled.div`
 `
 
 
-export const HeroImage = styled.div`
+export const HeroImage = styled.img`
     width: 100%;
-    height: 100%;
-    padding-bottom: 90%;
-    background-image: url('/assets/hero.png');
-    background-size: cover;
+    height: auto;
 `
 
 export const StyledIcon = styled.div`

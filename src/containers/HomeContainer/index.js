@@ -1,12 +1,13 @@
+
+import images from "../../assets/images"
 import Button from "../../components/Button"
 import Icon from "../../components/Icon"
 import { HeroImage, StyledButtonWrapper, StyledImageContainer, StyledWrapper } from "./styles"
-
 const HomeContainer = (props) => {
     return (
         <StyledWrapper ref={props.homeRef}>
             <StyledImageContainer>
-                <HeroImage />
+                <HeroImage src={images.hero} />
             </StyledImageContainer>
             <StyledButtonWrapper>
                 <Button>

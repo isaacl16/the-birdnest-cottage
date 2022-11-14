@@ -1,6 +1,6 @@
+import images from "../../assets/images"
 import Icon from "../../components/Icon"
 import { StyledChild, StyledContainer, StyledHeader, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
-
 
 const AboutContainer = (props) => {
     return (
@@ -21,7 +21,7 @@ const AboutContainer = (props) => {
                     </StyledIconWrapper>
                 </StyledChild>
                 <StyledChild>
-                    <StyledImage />
+                    <StyledImage src={images.about} />
                 </StyledChild>
             </StyledContainer>
         </StyledWrapper>

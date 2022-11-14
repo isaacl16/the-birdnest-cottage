@@ -14,6 +14,7 @@ const Navbar = (props) => {
             top: elementRef.current.offsetTop - 100,
             behavior: 'smooth'
         })
+        closeOnClick()
     }
     const handleScroll = () => {
         const position = window.pageYOffset;
@@ -54,7 +55,7 @@ const Navbar = (props) => {
         <>
             {
                 mobileNavMenu ?
-                    <StyledBackground />
+                    <StyledBackground onClick={closeOnClick} />
                     : <></>
             }
             {
@@ -74,13 +75,13 @@ const Navbar = (props) => {
                     <></>
                 }
                 <StyledNavItem onClick={() => scrollToSection(props.homeRef)} isActive={activeLink === 'home' ? true : false}>
-                    home
+                    HOME
                 </StyledNavItem>
                 <StyledNavItem onClick={() => scrollToSection(props.aboutRef)} isActive={activeLink === 'about' ? true : false}>
-                    about
+                    ABOUT
                 </StyledNavItem>
                 <StyledNavItem onClick={() => scrollToSection(props.productsRef)} isActive={activeLink === 'products' ? true : false}>
-                    products
+                    PRODUCTS
                 </StyledNavItem>
             </StyledNav>
 
