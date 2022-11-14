@@ -18,7 +18,7 @@ export const StyledWrapper = styled.div`
     @media (max-width: ${breakpoints.md}) {
         padding: 0 20px 0 8px;
     }
-
+    z-index: 1;
 `
 
 export const StyledLogo = styled.img`

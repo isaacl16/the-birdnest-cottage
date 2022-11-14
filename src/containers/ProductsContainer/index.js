@@ -5,7 +5,7 @@ import { StyledColumn, StyledContainer, StyledDescription, StyledHeader, StyledI
 
 const ProductsContainer = (props) => {
     return (
-        <StyledWrapper ref={props.productsRef}>
+        <StyledWrapper animate={props.animate} ref={props.productsRef}>
             <StyledHeader>
                 <h1>Products</h1>
             </StyledHeader>

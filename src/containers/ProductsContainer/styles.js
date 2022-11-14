@@ -3,8 +3,9 @@ import breakpoints from "../../theme/breakpoints";
 import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
-    min-height: 80vh;
     padding: 10%;
+    opacity: ${({ animate }) => (animate ? "1" : "0")};
+    transition: opacity 1s;
 `
 
 export const StyledHeader = styled.div`

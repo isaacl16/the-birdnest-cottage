@@ -18,8 +18,9 @@ const Navbar = (props) => {
     }
     const handleScroll = () => {
         const position = window.pageYOffset;
-        if (position >= props.productsRef.current.offsetTop - 100)
+        if (position >= props.productsRef.current.offsetTop - 100) {
             setActiveLink('products')
+        }
         else if (position >= props.aboutRef.current.offsetTop - 100)
             setActiveLink('about')
         else

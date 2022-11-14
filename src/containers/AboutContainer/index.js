@@ -5,10 +5,10 @@ import { StyledChild, StyledContainer, StyledHeader, StyledIconWrapper, StyledIm
 const AboutContainer = (props) => {
     return (
         <StyledWrapper ref={props.aboutRef}>
-            <StyledHeader>
+            <StyledHeader animate={props.animate}>
                 <h1>About</h1>
             </StyledHeader>
-            <StyledContainer>
+            <StyledContainer animate={props.animate}>
                 <StyledChild>
                     <div>
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris auctor eleifend ex eget tempus. Sed blandit ultricies metus a mollis. Vestibulum sodales pulvinar neque a ultrices. Maecenas mattis placerat tellus at volutpat. Integer hendrerit arcu vel pretium posuere. Proin ac sollicitudin ante. Duis nunc sem, dapibus eget eros in, facilisis laoreet tortor. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas.

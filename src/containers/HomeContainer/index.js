@@ -1,4 +1,3 @@
-
 import images from "../../assets/images"
 import Button from "../../components/Button"
 import Icon from "../../components/Icon"

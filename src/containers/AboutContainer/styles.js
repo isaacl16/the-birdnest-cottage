@@ -17,6 +17,9 @@ export const StyledHeader = styled.div`
         width: 100%;
         padding: 0;
     }
+    opacity: ${({ animate }) => (animate ? "1" : "0")};
+    transition: opacity 1s;
+
 `
 
 export const StyledContainer = styled.div`
@@ -32,6 +35,8 @@ export const StyledContainer = styled.div`
     @media (max-width: ${breakpoints.sm}) {
         width: 100%;
     }
+    opacity: ${({ animate }) => (animate ? "1" : "0")};
+    transition: opacity 1s;
 `
 export const StyledChild = styled.div`
     width: 48%;
