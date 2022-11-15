@@ -1,16 +1,14 @@
 import styled from "styled-components/macro";
 import breakpoints from "../../theme/breakpoints";
-import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
-    margin-top: 0px;
-    padding: 200px 0 100px 0;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    @media (min-width: ${breakpoints.md}) {
-        min-height: 80vh;
+    min-height: 100vh;
+    @media (max-width: ${breakpoints.md}) {
+        padding-top: 50px;
     }
 
 `
