@@ -4,7 +4,6 @@ import { useEffect, useRef, useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
 import { fetchCloudinaryImages } from "../../apis";
-import banner from "../../assets/images/banner";
 import AboutContainer from "../../containers/AboutContainer";
 import Footer from "../../containers/Footer";
 import Header from "../../containers/Header";
