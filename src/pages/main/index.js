@@ -1,6 +1,9 @@
-import { useRef, useState } from "react";
+import { AdvancedImage } from '@cloudinary/react';
+import { Cloudinary } from "@cloudinary/url-gen";
+import { useEffect, useRef, useState } from "react";
 import { Carousel } from 'react-responsive-carousel';
 import "react-responsive-carousel/lib/styles/carousel.min.css"; // requires a loader
+import { fetchCloudinaryImages } from "../../apis";
 import banner from "../../assets/images/banner";
 import AboutContainer from "../../containers/AboutContainer";
 import Footer from "../../containers/Footer";
@@ -11,10 +14,13 @@ import { useScroll } from "../../hooks";
 import { StyledBackground, StyledContainer, StyledLayout } from "./styles";
 
 const Main = () => {
+    const cloudName = process.env.REACT_APP_CLOUDINARY_CLOUDNAME
     const homeRef = useRef(null)
     const aboutRef = useRef(null)
     const productsRef = useRef(null)
     const [modal, setModal] = useState(true)
+    const [bannerImages, setBannerImages] = useState([])
+    const [isMobile, setIsMobile] = useState(false)
 
 
     const [show, doShow] = useState({
@@ -40,39 +46,52 @@ const Main = () => {
     const closeOnClick = () => {
         setModal(false)
     }
+
+    const getWindowSize = () => {
+        const width = window.innerWidth
+        let flag = false
+        console.log(width)
+        if (width <= 480) {
+            console.log("here")
+            flag = true
+        }
+        setIsMobile(flag)
+        console.log(flag)
+        return flag
+    }
+
+    useEffect(() => {
+        const fetchData = async (flag) => {
+            const res = await fetchCloudinaryImages(flag)
+            setBannerImages(res.data.resources)
+        }
+        fetchData(getWindowSize())
+    }, [])
+
+    const renderBannerImages = () => {
+        return bannerImages.map((data) => {
+            const cld = new Cloudinary({
+                cloud: {
+                    cloudName: cloudName
+                }
+            });
+            const image = cld.image(data.public_id);
+            return <AdvancedImage cldImg={image} />
+        })
+
+    }
+
     return (
         <StyledLayout>
             {
-                modal ?
+                modal && bannerImages.length > 0 ?
                     <>
                         <StyledBackground onClick={closeOnClick} />
                         <StyledContainer>
                             <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} interval={5000} showThumbs={false}>
-                                <div>
-                                    <img src={banner[1]} alt="Not Found" />
-                                    <p className="legend">Promo 1</p>
-                                </div>
-                                <div>
-                                    <img src={banner[2]} alt="Not Found" />
-                                    <p className="legend">Promo 2</p>
-                                </div>
-                                <div>
-                                    <img src={banner[3]} alt="Not Found" />
-                                    <p className="legend">Promo 3</p>
-                                </div>
-                                <div>
-                                    <img src={banner[4]} alt="Not Found" />
-                                    <p className="legend">Promo 4</p>
-                                </div>
-                                <div>
-                                    <img src={banner[5]} alt="Not Found" />
-                                    <p className="legend">Promo 5</p>
-                                </div>
-                                <div>
-                                    <img src={banner[6]} alt="Not Found" />
-                                    <p className="legend">Promo 6</p>
-                                </div>
-
+                                {
+                                    renderBannerImages()
+                                }
                             </Carousel>
                         </StyledContainer>
                     </>

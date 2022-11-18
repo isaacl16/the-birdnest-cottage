@@ -25,8 +25,9 @@ export const StyledContainer = styled.div`
     transform: translate(-50%, -50%);
     z-index: 10;
     max-width: ${breakpoints.xl};
+    width: 90%;
     box-shadow: 0 0 6px 4px #B3B3B3;
     @media (max-width: ${breakpoints.sm}) {
-        max-width: 90%;
+        width: 80%;
     }
 `

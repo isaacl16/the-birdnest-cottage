@@ -5,7 +5,6 @@ import { StyledBackground, StyledContainer, StyledNav, StyledNavItem } from './s
 
 const Navbar = (props) => {
     const [activeLink, setActiveLink] = useState('home')
-    const [isMobile, setIsMobile] = useState(false)
     const [mobileNavMenu, setMobileNavMenu] = useState(false)
 
     const scrollToSection = (elementRef) => {
@@ -28,14 +27,6 @@ const Navbar = (props) => {
         // console.log(activeLink + "  " + position)
     };
 
-    const handleResize = () => {
-        const width = window.innerWidth
-        if (width <= 480) {
-            setIsMobile(true)
-        } else {
-            setIsMobile(false)
-        }
-    }
 
     const menuOnClick = () => {
         setMobileNavMenu(true)
@@ -47,10 +38,6 @@ const Navbar = (props) => {
         document.body.style.overflow = 'unset'
     }
     useScroll(handleScroll)
-    useResize(handleResize)
-    useEffect(() => {
-        handleResize()
-    }, [])
 
     return (
         <>
@@ -60,7 +47,7 @@ const Navbar = (props) => {
                     : <></>
             }
             {
-                isMobile ?
+                props.isMobile ?
                     <StyledContainer>
                         <IconButton icon="menu" onClick={menuOnClick} />
                     </StyledContainer>
@@ -68,7 +55,7 @@ const Navbar = (props) => {
                     <></>
             }
             <StyledNav active={mobileNavMenu}>
-                {isMobile ?
+                {props.isMobile ?
                     <StyledContainer>
                         <IconButton icon="close" onClick={closeOnClick} />
                     </StyledContainer>

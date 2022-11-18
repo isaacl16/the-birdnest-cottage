@@ -5,7 +5,7 @@ const Header = (props) => {
     return (
         <StyledWrapper>
             <StyledLogo src={images.logo} />
-            <Navbar homeRef={props.homeRef} productsRef={props.productsRef} aboutRef={props.aboutRef} />
+            <Navbar homeRef={props.homeRef} productsRef={props.productsRef} aboutRef={props.aboutRef} isMobile={props.isMobile} />
         </StyledWrapper>
     )
 }
