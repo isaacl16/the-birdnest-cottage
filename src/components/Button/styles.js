@@ -2,6 +2,7 @@ import styled from "styled-components/macro";
 import colors from "../../theme/colors";
 
 export const StyledButton = styled.button`
+    cursor: pointer;
     width: ${props => props.width};
     height: 48px;
     border-radius: 50px;
@@ -15,7 +16,15 @@ export const StyledButton = styled.button`
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    img {
-        margin-left: 5px;
+    opacity: 1;
+    :hover {
+        opacity: 0.5;
+        transition: opacity 0.3s;
+    }
+    p {
+        :first-child:nth-last-child(2),
+        :first-child:nth-last-child(2) ~ p {
+            margin-right: 5px;
+        }
     }
 `

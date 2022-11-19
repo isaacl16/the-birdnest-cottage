@@ -1,9 +1,9 @@
 import icons from "../../assets/icons"
 import { StyledIconButton } from './styles'
 
-const IconButton = ({ onClick, icon }) => {
+const IconButton = ({ onClick, link, icon }) => {
     return (
-        <StyledIconButton onClick={onClick} src={icons[icon]} />
+        <StyledIconButton onClick={() => onClick(link)} src={icons[icon]} />
     )
 }
 

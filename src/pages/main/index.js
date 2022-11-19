@@ -9,7 +9,7 @@ import Footer from "../../containers/Footer";
 import Header from "../../containers/Header";
 import HomeContainer from "../../containers/HomeContainer";
 import ProductsContainer from "../../containers/ProductsContainer";
-import { useScroll } from "../../hooks";
+import { useResize, useScroll } from "../../hooks";
 import { StyledBackground, StyledContainer, StyledLayout } from "./styles";
 
 const Main = () => {
@@ -40,7 +40,6 @@ const Main = () => {
             doShow(state => ({ ...state, itemThree: true }));
         }
     };
-    useScroll(onScroll)
 
     const closeOnClick = () => {
         setModal(false)
@@ -49,13 +48,11 @@ const Main = () => {
     const getWindowSize = () => {
         const width = window.innerWidth
         let flag = false
-        console.log(width)
         if (width <= 480) {
             console.log("here")
             flag = true
         }
         setIsMobile(flag)
-        console.log(flag)
         return flag
     }
 
@@ -80,6 +77,9 @@ const Main = () => {
 
     }
 
+    useScroll(onScroll)
+    useResize(getWindowSize)
+
     return (
         <StyledLayout>
             {
@@ -87,7 +87,7 @@ const Main = () => {
                     <>
                         <StyledBackground onClick={closeOnClick} />
                         <StyledContainer>
-                            <Carousel showArrows={true} autoPlay={true} infiniteLoop={true} interval={5000} showThumbs={false}>
+                            <Carousel showArrows={false} showStatus={false} autoPlay={true} infiniteLoop={true} interval={5000} showThumbs={false}>
                                 {
                                     renderBannerImages()
                                 }

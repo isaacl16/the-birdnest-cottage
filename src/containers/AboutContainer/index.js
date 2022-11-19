@@ -1,8 +1,10 @@
 import images from "../../assets/images"
-import Icon from "../../components/Icon"
+import IconButton from "../../components/IconButton"
+import { onClickRedirect } from "../../utils"
 import { StyledChild, StyledContainer, StyledHeader, StyledIconWrapper, StyledImage, StyledWrapper } from "./styles"
 
 const AboutContainer = (props) => {
+
     return (
         <StyledWrapper ref={props.aboutRef}>
             <StyledHeader animate={props.animate}>
@@ -16,8 +18,8 @@ const AboutContainer = (props) => {
                         Vestibulum sapien ipsum, pretium sit amet nunc at, feugiat imperdiet risus. Etiam fermentum dictum ipsum, id lobortis sapien. Aenean sollicitudin nec massa ac dictum. Mauris sed ante neque. Nullam sodales sodales gravida.
                     </div>
                     <StyledIconWrapper>
-                        <Icon icon="instagram" />
-                        <Icon icon="mail" />
+                        <IconButton onClick={onClickRedirect} icon="instagram" link="https://www.instagram.com" />
+                        <IconButton icon="mail" onClick={onClickRedirect} link="#" />
                     </StyledIconWrapper>
                 </StyledChild>
                 <StyledChild>

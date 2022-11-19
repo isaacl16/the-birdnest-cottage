@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import IconButton from "../../components/IconButton";
 import { useResize, useScroll } from "../../hooks";
+import { onClickRedirect } from "../../utils";
 import { StyledBackground, StyledContainer, StyledNav, StyledNavItem } from './styles';
 
 const Navbar = (props) => {
@@ -72,7 +73,7 @@ const Navbar = (props) => {
                     PRODUCTS
                 </StyledNavItem>
                 <StyledNavItem>
-                    SHOP
+                    <p onClick={() => onClickRedirect("https://www.lazada.sg")}>SHOP</p>
                 </StyledNavItem>
             </StyledNav>
 

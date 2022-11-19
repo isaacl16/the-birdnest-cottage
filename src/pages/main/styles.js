@@ -24,10 +24,7 @@ export const StyledContainer = styled.div`
     background-color: rgba(255, 255, 255, 1);
     transform: translate(-50%, -50%);
     z-index: 10;
-    max-width: ${breakpoints.xl};
-    width: 90%;
+    max-width: ${breakpoints.lg};
+    width: 80%;
     box-shadow: 0 0 6px 4px #B3B3B3;
-    @media (max-width: ${breakpoints.sm}) {
-        width: 80%;
-    }
 `

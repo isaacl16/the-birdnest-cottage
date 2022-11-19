@@ -2,7 +2,6 @@ import styled, { css } from "styled-components/macro";
 import colors from "../../theme/colors";
 
 const activeStyle = (props) => css`
-    font-weight: ${props => props.isActive ? 'bold' : 'normal'};
     color: ${props => props.isActive ? colors.green : colors.grey};
 `
 
@@ -65,6 +64,9 @@ export const StyledNavItem = styled.li`
     }
     :hover {
         cursor: pointer;
+    }
+    p {
+        margin: 0;
     }
     ${activeStyle(props => props.isActive)}
 `

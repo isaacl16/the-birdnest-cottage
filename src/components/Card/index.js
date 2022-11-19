@@ -11,7 +11,7 @@ const Card = (props) => {
                 <p>{props.price1}</p>
                 <p>{props.price2}</p>
             </StyledDescription>
-            <Button width="100%">
+            <Button width="100%" onClick={props.onClick} link={props.link}>
                 <Icon icon="cart" />
             </Button>
         </StyledWrapper>
