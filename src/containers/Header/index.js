@@ -1,6 +1,7 @@
 import images from "../../assets/images"
 import Navbar from "../Navbar"
 import { StyledLogo, StyledWrapper } from "./styles"
+
 const Header = (props) => {
     return (
         <StyledWrapper>
