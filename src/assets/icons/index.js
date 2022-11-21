@@ -1,8 +1,8 @@
 export default {
-    cart: require("./cart.png"),
-    close: require("./close.png"),
-    instagram: require("./instagram.png"),
-    lazada: require("./lazada.png"),
-    mail: require("./mail.png"),
-    menu: require("./menu.png"),
+    cart: require("./cart.svg").default,
+    close: require("./close.svg").default,
+    instagram: require("./instagram.svg").default,
+    lazada: require("./lazada.svg").default,
+    mail: require("./mail.svg").default,
+    menu: require("./menu.svg").default,
 }   
