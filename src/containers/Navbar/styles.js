@@ -59,10 +59,13 @@ export const StyledContainer = styled.div`
 
 export const StyledNavItem = styled.li`
     padding-left: 1rem; 
+    opacity: 1;
     :first-child {
         padding: 0;
     }
     :hover {
+        opacity: 0.5;
+        transition: opacity 0.3s;
         cursor: pointer;
     }
     p {
