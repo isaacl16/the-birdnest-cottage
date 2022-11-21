@@ -18,8 +18,8 @@ const AboutContainer = (props) => {
                         Vestibulum sapien ipsum, pretium sit amet nunc at, feugiat imperdiet risus. Etiam fermentum dictum ipsum, id lobortis sapien. Aenean sollicitudin nec massa ac dictum. Mauris sed ante neque. Nullam sodales sodales gravida.
                     </div>
                     <StyledIconWrapper>
-                        <IconButton onClick={onClickRedirect} icon="instagram" link="https://www.instagram.com" />
-                        <IconButton icon="mail" onClick={onClickRedirect} link="#" />
+                        <IconButton onClick={() => onClickRedirect("https://www.instagram.com")} icon="instagram" />
+                        <IconButton icon="mail" onClick={() => onClickRedirect("mailto:contact@thebirdnestcottage.com")} link="#" />
                     </StyledIconWrapper>
                 </StyledChild>
                 <StyledChild>

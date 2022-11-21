@@ -1,21 +1,13 @@
 import { useEffect, useState } from "react";
 import IconButton from "../../components/IconButton";
 import { useResize, useScroll } from "../../hooks";
-import { onClickRedirect } from "../../utils";
+import { onClickRedirect, scrollToSection } from "../../utils";
 import { StyledBackground, StyledContainer, StyledNav, StyledNavItem } from './styles';
 
 const Navbar = (props) => {
     const [activeLink, setActiveLink] = useState('home')
     const [mobileNavMenu, setMobileNavMenu] = useState(false)
 
-    const scrollToSection = (elementRef) => {
-        // console.log(elementRef.current.offsetTop)
-        window.scrollTo({
-            top: elementRef.current.offsetTop - 70,
-            behavior: 'smooth'
-        })
-        closeOnClick()
-    }
     const handleScroll = () => {
         const position = window.pageYOffset;
         if (position >= props.productsRef.current.offsetTop - 100) {
@@ -28,6 +20,11 @@ const Navbar = (props) => {
         // console.log(activeLink + "  " + position)
     };
 
+    const navOnClick = (elementRef) => {
+        scrollToSection(elementRef)
+        if (props.isMobile)
+            closeOnClick()
+    }
 
     const menuOnClick = () => {
         setMobileNavMenu(true)
@@ -63,13 +60,13 @@ const Navbar = (props) => {
                     :
                     <></>
                 }
-                <StyledNavItem onClick={() => scrollToSection(props.homeRef)} isActive={activeLink === 'home' ? true : false}>
+                <StyledNavItem onClick={() => navOnClick(props.homeRef)} isActive={activeLink === 'home' ? true : false}>
                     HOME
                 </StyledNavItem>
-                <StyledNavItem onClick={() => scrollToSection(props.aboutRef)} isActive={activeLink === 'about' ? true : false}>
+                <StyledNavItem onClick={() => navOnClick(props.aboutRef)} isActive={activeLink === 'about' ? true : false}>
                     ABOUT
                 </StyledNavItem>
-                <StyledNavItem onClick={() => scrollToSection(props.productsRef)} isActive={activeLink === 'products' ? true : false}>
+                <StyledNavItem onClick={() => navOnClick(props.productsRef)} isActive={activeLink === 'products' ? true : false}>
                     PRODUCTS
                 </StyledNavItem>
                 <StyledNavItem>

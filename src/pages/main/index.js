@@ -97,7 +97,7 @@ const Main = () => {
                     : <></>
             }
             <Header homeRef={homeRef} aboutRef={aboutRef} productsRef={productsRef} isMobile={isMobile} />
-            <HomeContainer homeRef={homeRef} />
+            <HomeContainer homeRef={homeRef} aboutRef={aboutRef} />
             <AboutContainer animate={show.itemTwo} aboutRef={aboutRef} />
             <ProductsContainer animate={show.itemThree} productsRef={productsRef} />
             <Footer />

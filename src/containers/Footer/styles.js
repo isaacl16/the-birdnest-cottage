@@ -3,9 +3,9 @@ import colors from "../../theme/colors";
 
 export const StyledWrapper = styled.div`
     height: 100px;
-    background-color: ${colors.grey};
+    background-color: ${colors.gold};
     padding: 20px;
-    color: ${colors.white};
+    color: ${colors.grey};
     display: flex;
     align-items: center;
     justify-content: center;

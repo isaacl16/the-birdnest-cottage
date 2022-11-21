@@ -10,7 +10,7 @@ const ProductsContainer = (props) => {
     const renderProducts = useMemo(() => {
         return data.length ?
             data.map((product) => {
-                return <Card image={products[product.image]} title={product.title} price1={product.price1} price2={product.price2} onClick={onClickRedirect} link="https://www.lazada.sg" />
+                return <Card image={products[product.image]} title={product.title} price1={product.price1} price2={product.price2} onClick={() => onClickRedirect("https://www.lazada.sg")} />
             })
             : <p>No Products Found</p>
     }, [])

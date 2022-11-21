@@ -1,7 +1,7 @@
 import images from "../../assets/images"
 import Button from "../../components/Button"
 import Icon from "../../components/Icon"
-import { onClickRedirect } from "../../utils"
+import { onClickRedirect, scrollToSection } from "../../utils"
 import { HeroImage, StyledButtonWrapper, StyledImageContainer, StyledWrapper } from "./styles"
 const HomeContainer = (props) => {
     return (
@@ -10,11 +10,11 @@ const HomeContainer = (props) => {
                 <HeroImage src={images.hero} />
             </StyledImageContainer>
             <StyledButtonWrapper>
-                <Button onClick={onClickRedirect} link="https://www.lazada.sg" >
+                <Button onClick={() => onClickRedirect("https://www.lazada.sg")} >
                     <p>Visit our shop</p>
                     <Icon icon="lazada" />
                 </Button>
-                <Button onClick={onClickRedirect} link="#" outline={true}>
+                <Button onClick={() => scrollToSection(props.aboutRef)} elementRef={props.aboutRef} outline={true}>
                     <p>Find out more</p>
                 </Button>
             </StyledButtonWrapper>
